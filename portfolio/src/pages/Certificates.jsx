@@ -35,7 +35,7 @@ link:"https://drive.google.com/file/d/1xUTr0WBEGfTk8ePz0RU3OQxK5swv07Dm/view?usp
 
 return (
 
-<section className="min-h-screen bg-slate-950 text-white py-24">
+<section className="min-h-screen text-white">
 
 
 <div className="max-w-7xl mx-auto px-6">

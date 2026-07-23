@@ -10,7 +10,7 @@ const Navbar = () => {
   const links = [
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },
-    { name:"Skills", path:"/skills" },
+    { name: "Skills", path: "/skills" },
     { name: "Projects", path: "/projects" },
     { name: "Certificates", path: "/certificates" },
     { name: "Resume", path: "/resume" },
@@ -25,7 +25,6 @@ const Navbar = () => {
       className="fixed top-0 left-0 w-full z-50 bg-slate-900/80 backdrop-blur-lg border-b border-slate-700"
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
-
         {/* Logo */}
         <NavLink
           to="/"
@@ -48,23 +47,13 @@ const Navbar = () => {
                 }`
               }
             >
-              {({ isActive }) => (
-                <>
-                  {link.name}
-                  <span
-                    className={`absolute left-0 -bottom-1 h-0.5 bg-cyan-400 transition-all duration-300 ${
-                      isActive ? "w-full" : "w-0 group-hover:w-full"
-                    }`}
-                  ></span>
-                </>
-              )}
+              {link.name}
             </NavLink>
           ))}
         </div>
 
         {/* Social Icons */}
         <div className="hidden md:flex items-center gap-5">
-
           <a
             href="https://github.com/asimwaheed005-ui"
             target="_blank"
@@ -75,24 +64,22 @@ const Navbar = () => {
           </a>
 
           <a
-            href="https://www.linkedin.com/in/asim-waheed-705b18377?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+            href="https://www.linkedin.com/in/asim-waheed-705b18377"
             target="_blank"
             rel="noreferrer"
             className="text-gray-300 hover:text-cyan-400 transition"
           >
             <FaLinkedin size={22} />
           </a>
-
         </div>
 
-        {/* Mobile Button */}
+        {/* Mobile Menu Button */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
           className="md:hidden text-white"
         >
           {menuOpen ? <FiX size={28} /> : <FiMenu size={28} />}
         </button>
-
       </div>
 
       {/* Mobile Menu */}
@@ -124,7 +111,6 @@ const Navbar = () => {
           </motion.div>
         )}
       </AnimatePresence>
-
     </motion.nav>
   );
 };
