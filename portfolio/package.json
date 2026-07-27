@@ -13,6 +13,7 @@
     "@tailwindcss/vite": "^4.3.3",
     "@tsparticles/react": "^4.3.2",
     "@tsparticles/slim": "^4.3.2",
+    "@vercel/analytics": "^2.0.1",
     "framer-motion": "^12.42.2",
     "icons": "^1.0.0",
     "lucide-react": "^1.26.0",
