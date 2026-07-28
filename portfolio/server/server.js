@@ -7,23 +7,25 @@ dotenv.config();
 
 const app = express();
 
-// CORS
+
+// Allow frontend requests
 app.use(
   cors({
-    origin: [
-      "http://localhost:5173",
-      "http://localhost:3000",
-      "https://my-portfolio-58esbgwun-asimwaheed005-uis-projects.vercel.app",
-    ],
-    methods: ["GET", "POST", "OPTIONS"],
-    credentials: true,
+    origin: "*",
+    methods: ["GET", "POST"],
+    allowedHeaders: ["Content-Type"],
   })
 );
 
+
 app.use(express.json());
 
+
+// Chat API
 app.use("/api/chat", chatRoutes);
 
+
+// Test Route
 app.get("/", (req, res) => {
   res.json({
     success: true,
@@ -31,6 +33,8 @@ app.get("/", (req, res) => {
   });
 });
 
+
+// Server
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
