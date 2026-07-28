@@ -23,7 +23,7 @@ const ChatInput = ({ onSend, loading }) => {
         placeholder="Ask me about Asim..."
         value={message}
         onChange={(e) => setMessage(e.target.value)}
-        className="flex-1 border rounded-xl px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        className="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-black dark:text-white placeholder:text-gray-500 dark:placeholder:text-gray-400 outline-none"
       />
 
       <button

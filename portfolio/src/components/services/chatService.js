@@ -1,5 +1,4 @@
-const API_URL = "http://localhost:5000/api/chat";
-
+ "https://my-portfolio-production-609c.up.railway.app/api/chat";
 
 export const sendMessage = async (conversation) => {
 
