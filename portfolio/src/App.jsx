@@ -22,7 +22,7 @@ import Certificates from "./pages/Certificates";
 import Resume from "./pages/Resume";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
-
+import Chatbot from "./components/chatbot/Chatbot";
 function App() {
   const [loading, setLoading] = useState(true);
 
@@ -143,6 +143,8 @@ function App() {
 
       {/* Back To Top */}
       <BackToTop />
+
+          <Chatbot />
     </>
   );
 }
